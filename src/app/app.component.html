@@ -1,0 +1,28 @@
+<app-search></app-search>
+<hr/>
+<!-- <app-todolist></app-todolist> -->
+<hr/>
+<app-news [title]="msg" [run]="run" [home]="this"></app-news>
+<hr/>
+<!-- <app-transition></app-transition> -->
+<hr/>
+<h2>Routing</h2>
+<h1 style="widows: 44px;line-height:44px">
+    <a routerLink="/news" style="padding:10px" routerLinkActive='active1'>NEWS</a>
+    <a routerLink="/search" style="padding:10px" routerLinkActive='active1'>SEARCH</a>
+    <a routerLink="/todolist" style="padding:10px" routerLinkActive='active1'>ToDoList</a>
+    <a routerLink="/product" style="padding:10px" routerLinkActive='active1'>Product</a>
+</h1>
+<router-outlet></router-outlet>
+<hr>
+<h2>User module</h2>
+<app-profile></app-profile>
+<app-user></app-user>
+<br>
+<hr>
+<br>
+<h2>dynamic Lazy loading</h2>
+<a [routerLink]="['/articlemodule']">article module</a>
+<br>
+<a [routerLink]="['/productmodule' ]">product module</a>
+<br>

@@ -1,0 +1,18 @@
+#aside{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+
+    right: 0 px;
+    top: 0px;
+    background-color: black;
+    color: aliceblue;
+    transform: translate(100%,0);
+    transition: all 2s;
+
+}
+.content{
+    position: absolute;
+    width: 800px;
+    height: 100%;
+}

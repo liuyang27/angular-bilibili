@@ -1,0 +1,33 @@
+<h2>07 viewchild</h2>
+<app-header #header></app-header>
+<div #mybox>
+    this is a nood
+</div>
+<button (click)="getChildRun()">get child component</button>
+<h3>msg from parent: {{title}}</h3>
+<button (click)="getparentMsg()">getparentMsg</button>
+<button (click)="getparentRun()">getparentRun</button>
+<hr/>
+<h2>HttpClientModule</h2>
+<button (click)="getData()">http get </button>
+<ul *ngFor="let emp of emplist">
+    <li>{{emp.id}}. {{emp.name}}-{{emp.age}}</li>
+</ul>
+
+<button (click)="postData()">http post </button>
+{{serverReply | json}}
+<br/>
+<h2>get chuanzhi</h2>
+<a [routerLink]="['/newscontent']">news content</a>
+<ul>
+    <li *ngFor="let news of newslist;let key=index">
+        <a [routerLink]="['/newscontent']" [queryParams]="{aid:key}">{{key}}--{{news}}</a>
+    </li>
+</ul>
+
+<h2>dongtai lu you</h2>
+<ul>
+    <li *ngFor="let news of newslist;let key=index">
+        <a [routerLink]="['/newscontent/',key]">{{key}}--{{news}}</a>
+    </li>
+</ul>
